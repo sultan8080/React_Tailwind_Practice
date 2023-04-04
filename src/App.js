@@ -12,12 +12,12 @@ import { data } from 'autoprefixer';
 function App() {
   console.log(Data[0].desc)
 
-  let items = [];
+  // let items = [];
   // for (let x = 0; x < Data.length; x++) {
   //   items.push(<Card title={Data[x].title} descText={Data[x].desc} />)
   // }
 
-  items = Data.map((item) => <Card title={item.title} descText={item.desc} />);
+  const items = Data.map((item, index) => <Card key={index} title={item.title} descText={item.desc} />);
   return (
 
 
